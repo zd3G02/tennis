@@ -65,7 +65,7 @@
     ?>
     <p>名前:<?php echo $row['name']?></p>
     <p>タイトル:<?php echo $title?></p>
-    <p><?php echo nl2br($row['body'], false) ?></p>
+    <p><?php echo nl2br (htmlspecialchars($row['body'], ENT_QUOTES,'UTF-8'), false) ?></p>
     <p><?php echo $row['date']?></p>
 	<?php endwhile;
 
